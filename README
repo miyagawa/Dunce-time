@@ -44,5 +44,6 @@ AUTHOR
     under the same terms as Perl itself.
 
 SEE ALSO
-    the D::oh::Year manpage, the overload manpage, the perl manpage
+    the Dunce::time::Zerofill manpage, the D::oh::Year manpage, the overload
+    manpage, the perl manpage
 
