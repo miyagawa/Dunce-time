@@ -2,7 +2,7 @@ package Dunce::time;
 
 use strict;
 use vars qw($VERSION);
-$VERSION = '0.01';
+$VERSION = '0.02';
 
 use overload    '""'    =>  \&timize,
                 '0+'    =>  \&timize,
@@ -46,7 +46,7 @@ sub _get_callback {
 	    Carp::carp $dying_msg, " I'll fix it.";
 	    return $this <=> $that; # goes to num_compare()
 	};
-	return sub {
+	/^:DIE/i && return sub {
 	    require Carp;
 	    Carp::croak $dying_msg;
 	};
