@@ -89,11 +89,11 @@ Dunce::time - Protects against sloppy use of time.
 =head1 DESCRIPTION
 
 On Sun Sep 9 01:46:40 2001 GMT, time_t (UNIX epoch) reaches 10 digits. 
-Sorting C<time()>'s as strings will cause unexpected result after
+Sorting time()'s as strings will cause unexpected result after
 that.
 
-When Dunce::time is used, it provides special version of C<time()>
-which will die with a message when compared as strings.
+When Dunce::time is used, it provides special version of time() which
+will die with a message when compared as strings.
 
 =head1 USAGE
 
