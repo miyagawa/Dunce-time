@@ -42,10 +42,12 @@ sub _get_callback {
 	};
 	/^:FIX/i && return sub {
 	    my($this, $that) = @_;
+	    require Carp;
 	    Carp::carp $dying_msg, " I'll fix it.";
 	    return $this <=> $that; # goes to num_compare()
 	};
 	return sub {
+	    require Carp;
 	    Carp::croak $dying_msg;
 	};
     }
